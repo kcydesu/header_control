@@ -26,7 +26,7 @@ class HeaderControl:
             print('System is ready for commands, waiting for input.')
 
     def set_goal_heading(self, goal):
-        self._heading_goal = goal
+        self._head_goal = goal
 
     def maintain_goal(self):
 
@@ -48,33 +48,33 @@ class HeaderControl:
                     print("Goal is out of range of servo.")
                 elif self._head_goal < cur_heading:
                     self._pos -= 10
-                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading,self._heading_goal))
+                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading,self._head_goal))
                 elif self._head_goal > cur_heading:
                     self._pos += 10
-                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
             else:
                 if (self._head_goal > maxval) and (self._head_goal < minval):
                     print("Goal is out of range of servo.")
                 elif (self._head_goal < maxval) & (cur_heading < maxval):
                     if self._head_goal < cur_heading:
                         self._pos -= 10
-                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
                     elif self._head_goal > cur_heading:
                         self._pos += 10
-                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
                 elif (self._head_goal > minval) & (cur_heading > minval):
                     if self._head_goal < cur_heading:
                         self._pos -= 10
-                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
                     elif self._head_goal > cur_heading:
                         self._pos += 10
-                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                        print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
                 elif (self._head_goal < maxval) & (cur_heading > maxval):
                     self._pos += 10
-                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
                 elif (self._head_goal > minval) & (cur_heading < minval):
                     self._pos -= 10
-                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._heading_goal))
+                    print("Finding... Current heading: {} Goal heading: {}".format(cur_heading, self._head_goal))
                 else:
                     pass
 

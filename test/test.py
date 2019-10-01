@@ -3,12 +3,13 @@ from header_control import HeaderControl
 
 def main():
 
-    servo_pin = 18
+    goal = 60
+    servo_pin = 35
     i2c_address = 0x29
 
-    hc = HeaderControl(18,0x29)
+    hc = HeaderControl(servo_pin,i2c_address)
 
-    hc.set_goal_heading(65)
+    hc.set_goal_heading(goal)
     hc.maintain_goal()
 
 
