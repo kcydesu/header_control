@@ -40,7 +40,24 @@ BNO055 pin 4 -> RPi pin 3
 
 Servo Vin -> RPi pin 17
 Servo Gnd -> RPi pin 39
-Servo Cntl -> RPi pin 35
+Servo Cntl -> RPi pin 18
 ```
+
+Note that in the sample code this line can change the Servo Cntl pin:
+```
+servo_pin = 18
+```
+This value is the board pin, NOT the GPIO number.
+
 ![RPi Pinout](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated.png)
 ![Servo Pinout](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/Servo-Motor-Wires.png)
+
+This package allows a user to input a desired heading value, and the servo will move to that point.  
+
+Technically, there are 8 different scenarios that the servo could face; this code addresses all 8, making sure to notify the user when the desired heading is out of the servo's range. 
+
+To use the sample, make sure your physical setup is the same as the one described above.
+```
+cd ~/header_control/test/
+python test.py <desired heading value>
+```
