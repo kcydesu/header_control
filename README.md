@@ -56,9 +56,22 @@ The header_control package allows a user to input a desired heading value, and t
 
 Technically, there are 8 different scenarios that the servo could face; this code addresses all 8, making sure to notify the user when the desired heading is out of the servo's range, and adjusting automatically to fulfill the remaining scenarios.
 
+To edit the desired heading value:
+
+```
+cd ~/header_control/test/
+nano test.py
+```
+
+The line to change is:
+```
+goal = 60
+```
+
 To use the sample, make sure your physical setup is the same as the one described above and then use these lines in the terminal to execute.
 
 ```
 cd ~/header_control/test/
-python test.py <desired heading value>
+python test.py
 ```
+
