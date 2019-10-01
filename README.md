@@ -26,12 +26,12 @@ sudo pip install -e .
 For the physical connection, you will need the Adafruit BNO055, and a servo motor.  We used the Tower Pro MicroServo 9g SG90.
 To keep the BNO055 attached to the servo, we used common household supplies.  
 
-In the picture below, we used index cards taped around the servo 'arms' with an index card formed into a holder for the BNO055.  that holder was then taped ontop of the index cards surrounding the servo arms.
+In the picture below, we used index cards taped around the servo 'arms' with an index card formed into a holder for the BNO055.  That holder was then taped ontop of the index cards surrounding the servo arms.
 
 ![Physical Setup 1](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/20191001_103457.jpg)
 ![Physical Setup 2](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/20191001_103504.jpg)
 
-The two pictures below show the pinout for the servo, and the RPi.  The BNO055 has the pinout labeled on the device for ease.1
+The two pictures below show the pinout for the servo, and the RPi.  The BNO055 has the pinout labeled on the device for ease.
 ```
 BNO055 pin 1 -> RPi pin 1 
 BNO055 pin 2 -> RPi pin 9
@@ -52,11 +52,12 @@ This value is the board pin, NOT the GPIO number.
 ![RPi Pinout](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated.png)
 ![Servo Pinout](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/Servo-Motor-Wires.png)
 
-This package allows a user to input a desired heading value, and the servo will move to that point.  
+The header_control package allows a user to input a desired heading value, and the servo will move to that point.  
 
-Technically, there are 8 different scenarios that the servo could face; this code addresses all 8, making sure to notify the user when the desired heading is out of the servo's range. 
+Technically, there are 8 different scenarios that the servo could face; this code addresses all 8, making sure to notify the user when the desired heading is out of the servo's range, and adjusting automatically to fulfill the remaining scenarios.
 
-To use the sample, make sure your physical setup is the same as the one described above.
+To use the sample, make sure your physical setup is the same as the one described above and then use these lines in the terminal to execute.
+
 ```
 cd ~/header_control/test/
 python test.py <desired heading value>
