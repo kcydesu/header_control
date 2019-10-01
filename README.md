@@ -32,6 +32,7 @@ In the picture below, we used index cards taped around the servo 'arms' with an 
 ![Physical Setup 2](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/20191001_103504.jpg)
 
 The two pictures below show the pinout for the servo, and the RPi.  The BNO055 has the pinout labeled on the device for ease.1
+```
 BNO055 pin 1 -> RPi pin 1 
 BNO055 pin 2 -> RPi pin 9
 BNO055 pin 3 -> RPi pin 5
@@ -40,6 +41,6 @@ BNO055 pin 4 -> RPi pin 3
 Servo Vin -> RPi pin 17
 Servo Gnd -> RPi pin 39
 Servo Cntl -> RPi pin 35
-
+```
 ![RPi Pinout](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated.png)
 ![Servo Pinout](https://github.com/NoelleTemple/header_control/blob/patch-2/pictures/Servo-Motor-Wires.png)
